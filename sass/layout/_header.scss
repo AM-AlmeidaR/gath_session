@@ -1,0 +1,60 @@
+@use '../abstracts/abstracts' as *;
+@use '../abstracts/variables';
+
+.header {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 16px;
+    padding-top: 25px;
+    position: relative;
+    z-index: 5;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    figure {
+        margin-left: 0;
+    }
+
+    .nav {
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+    
+            li {
+                position: relative;
+
+                .dropdown {
+                    border: 1px solid $pink;
+                    width: 30px;
+                    height: 2px;
+                    background-color: $pink;
+                    border-radius: 1px;
+                    position: absolute;
+                    bottom: -10px;
+                }
+
+                a {
+                    font-family: $poppins;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $grey;
+                }
+
+                &:first-child a {
+                    color: #FFFFFF;
+                }
+            }
+
+            li:hover {
+                color: $pink;
+                transition: 0.3s;
+                text-decoration: underline;
+            }
+        }
+    }
+}
